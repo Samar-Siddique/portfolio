@@ -113,7 +113,7 @@ export const Contact = () => {
                   <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">Location</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Address</h4>
                   <p className="text-gray-600 dark:text-gray-300">Sunflower Society J1 Block<br/>Johar Town, Lahore</p>
                 </div>
               </div>
