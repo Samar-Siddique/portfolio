@@ -2,9 +2,21 @@
 export const Experience = () => {
   const experiences = [
     {
+      company: 'TechEsthete',
+      position: 'Full Stack Developer',
+      duration: 'March 2025 - Present',
+      description: 'Leading frontend development for multiple high-impact projects including Q-vibez, Chaymberdeck, and ISN admin panels.',
+      achievements: [
+        'Developed Q-vibez project with Spotify API integration and Firebase backend',
+        'Built responsive admin panels using React.js, TypeScript, and Tailwind CSS',
+        'Implemented complex event scheduling functionalities',
+        'Collaborated with cross-functional teams to deliver scalable solutions'
+      ]
+    },
+    {
       company: 'Tanbits',
       position: 'React Js Developer',
-      duration: 'April 2023 - Present',
+      duration: 'April 2023 - March 2025',
       description: 'Leading frontend development for multiple high-impact projects including Q-vibez, Chaymberdeck, and ISN admin panels.',
       achievements: [
         'Developed Q-vibez project with Spotify API integration and Firebase backend',

@@ -16,13 +16,47 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/Samar-cv.pdf';
-    link.download = 'Samar-cv.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  // const handleDownloadCV = () => {
+  //   try {
+  //     const link = document.createElement('a');
+  //     link.href = '/Samar-cv.pdf';
+  //     link.download = 'Samar-cv.pdf';
+  //     link.target = '_blank'; // Open in new tab if download fails
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  //   } catch (error) {
+  //     console.error('Error downloading CV:', error);
+  //     // Fallback: Open in new tab
+  //     window.open('/Samar-cv.pdf', '_blank');
+  //   }
+  // };
+
+
+
+   const handleDownloadCV = async () => {
+    try {
+      const response = await fetch('/portfolio/Samar-cv.pdf');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Samar-cv.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      window.URL.revokeObjectURL(url);
+      
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+    }
   };
 
   return (

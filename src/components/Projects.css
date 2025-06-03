@@ -1,0 +1,70 @@
+.projects-swiper {
+  padding: 20px 50px !important;
+  margin: -20px -50px;
+}
+
+/* Navigation buttons */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  color: #3B82F6;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.dark .projects-swiper .swiper-button-next,
+.dark .projects-swiper .swiper-button-prev {
+  background-color: rgba(31, 41, 55, 0.9);
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Pagination bullets */
+.projects-swiper .swiper-pagination-bullet {
+  background-color: #3B82F6;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #3B82F6;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-swiper {
+    padding: 20px 30px !important;
+    margin: -20px -30px;
+  }
+
+  .projects-swiper .swiper-button-next,
+  .projects-swiper .swiper-button-prev {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-swiper {
+    padding: 20px !important;
+    margin: -20px;
+  }
+
+  .projects-swiper .swiper-button-next,
+  .projects-swiper .swiper-button-prev {
+    display: none;
+  }
+} 

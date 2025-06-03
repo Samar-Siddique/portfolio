@@ -140,7 +140,7 @@ const App = () => {
           setIsMobileMenuOpen={setIsMobileMenuOpen}
         />
 
-        <main className="pt-20">
+        <main className="pt-18">
           <section id="home">
             <HeroSection />
           </section>
